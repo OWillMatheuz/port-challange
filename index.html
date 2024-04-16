@@ -15,37 +15,45 @@
     <title>Portfólio Willian Matheus</title>
   </head>
   <body>
-    <!-- Início do Menu -->
-    <div class="all">
-      <section class="menu">
-        <!-- Cabeçalho com logo -->
-        <header>
-          <img class="logo" src="assets/img/logo-will-matheus.png" />
-        </header>
-        <!-- Navegação -->
-        <nav>
-          <ul class="menu__list">
-            <!-- Itens do menu -->
-            <li class="menu__list__item"><a href="#sobre">Sobre mim</a></li>
-            <li class="menu__list__item">
-              <a href="#s-habilidades">Skills</a>
-            </li>
-            <li class="menu__list__item">
-              <a href="#s-experience">Formações e Cursos</a>
-            </li>
-            <li class="menu__list__item">
-              <a href="#s-projetos">Experiência</a>
-            </li>
-            <li class="menu__list__item">
-              <a href="#contato">Contato</a>
-            </li>
-            <!-- Botão para baixar CV -->
-            <li class="menu__list__item">
-              <button id="gerar-pdf">Baixar CV</button>
-            </li>
-          </ul>
-        </nav>
-      </section>
+  <!-- Início do Menu -->
+<div class="all">
+  <section class="menu">
+    <!-- Cabeçalho com logo -->
+    <header>
+      <img class="logo" src="assets/img/logo-will-matheus.png" />
+    </header>
+    <!-- Navegação -->
+    <nav>
+      <!-- Botão do menu hamburger -->
+      <button class="menu-toggle" aria-expanded="true" aria-controls="menu-list">☰ Menu</button>
+      <!-- Lista do menu -->
+      <ul class="menu__list" id="menu-list">
+        <!-- Itens do menu -->
+        <li class="menu__list__item"><a href="#sobre">Sobre mim</a></li>
+        <li class="menu__list__item"><a href="#s-habilidades">Skills</a></li>
+        <li class="menu__list__item"><a href="#s-experience">Formações e Cursos</a></li>
+        <li class="menu__list__item"><a href="#s-projetos">Experiência</a></li>
+        <li class="menu__list__item"><a href="#contato">Contato</a></li>
+        <!-- Botão para baixar CV -->
+        <li class="menu__list__item">
+          <button id="gerar-pdf">Baixar CV</button>
+        </li>
+      </ul>
+      <!-- Menu dropdown -->
+      <div class="menu__dropdown" id="menu-dropdown">
+        <ul>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#s-habilidades">Skills</a></li>
+          <li><a href="#s-experience">Formações e Cursos</a></li>
+          <li><a href="#s-projetos">Experiência</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+</div>
+
+
 
       <!-- Cabeçalho -->
       <section class="title">
@@ -462,6 +470,7 @@
     </div>
     <!-- Scripts -->
     <!-- Biblioteca para geração de PDF -->
+    <script src="menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <!-- Script para alterar experiência -->
     <script src="hoverChangeExperience.js"></script>
@@ -477,5 +486,6 @@
     <script>
       console.log("EmailJS carregado:", typeof emailjs !== "undefined");
     </script>
+    
   </body>
 </html>

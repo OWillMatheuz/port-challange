@@ -11,9 +11,7 @@
 /* Estilos globais para o corpo da página */
 body {
   box-sizing: border-box;
-  background-color: var(
-    --bege
-  ); /* Erro: a variável '--bege' não foi definida */
+  background-color: var(--bege);
   font-family: var(--font-principal);
   margin: 0;
   padding: 0;
@@ -44,18 +42,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Estilos para a div com classe 'all' */
-div.all {
-  color: var(--preto);
-  box-sizing: border-box;
-}
-
 /* Estilos para a seção de menu */
 section.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0; /* Ajuste para zero */
+  margin-top: 0;
   padding: 16px 64px;
 }
 
@@ -106,18 +98,40 @@ section.menu {
   text-decoration: none;
 }
 
-/* Estilos de hover para botões do menu */
-.menu__list__item button:hover {
-  background-color: #00a855;
+/* Estilos para o menu hamburger em telas menores */
+.menu__list__item button.hamburger {
+  display: block; /* Mostrar o hamburger em telas menores */
 }
 
-/* Estilos para o título no menu */
-.menu__title {
-  margin-left: 10px;
-  font-size: 1.5rem;
+/* Estilos para o menu dropdown */
+.menu__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--cinza);
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
+
+.menu__dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__dropdown li {
+  padding: 12px 24px;
+}
+
+.menu__dropdown li:hover {
+  background-color: var(--cinza-claro);
+}
+
 /* Estilos para a seção de menu em dispositivos menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.menu {
     flex-direction: column;
     align-items: flex-start;
@@ -129,19 +143,60 @@ section.menu {
   }
 
   .menu__list {
+    display: none; /* Ocultar a lista em telas menores */
     flex-direction: column;
     gap: 16px;
+    position: absolute;
+    top: calc(100% + 16px); /* Posiciona a lista abaixo do botão hamburger */
+    left: 0;
+    background-color: var(--cinza);
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
   .menu__list__item {
     margin-bottom: 8px;
   }
 
-  .menu__list__item button {
+  .menu__list__item button.hamburger {
+    display: block; /* Mostrar o hamburger em telas menores */
+  }
+
+  .menu__list__item button.close {
+    display: none;
+  }
+
+  .menu__dropdown {
+    display: none;
+  }
+
+  .menu__list.active + .menu__dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     width: 100%;
+    top: 100%;
+    left: 0;
   }
 }
 
+/* Estilos para a seção de menu em dispositivos maiores */
+@media screen and (min-width: 770px) {
+  .menu__list {
+    display: flex; /* Mostrar a lista em telas maiores */
+  }
+
+  .menu__list__item button.hamburger {
+    display: none; /* Ocultar o hamburger em telas maiores */
+  }
+}
+
+
+
+
+
+/**/
 /* Estilos para a seção de título */
 section.title {
   margin: 24px 130px; /* Margens superior e inferior de 24px e laterais de 130px */
