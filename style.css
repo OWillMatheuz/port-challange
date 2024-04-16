@@ -623,25 +623,46 @@ section.title {
 /* Estilos responsivos para os ícones de Habilidades */
 @media screen and (max-width: 992px) {
   #s-habilidades .layout-grid #cartoes-habilidades {
-    flex-direction: row; /* Altera para linha em tablets */
-    flex-wrap: wrap; /* Quebra de linha automática */
-    justify-content: center; /* Centraliza os itens */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #s-habilidades .layout-grid #cartoes-habilidades article {
-    flex-basis: calc(33.3333% - 16px); /* 3 cartões por linha com espaço entre eles */
-    margin-right: 16px; /* Espaçamento à direita */
+    flex-basis: calc(50% - 16px); /* 2 cartões por linha */
     margin-bottom: 16px; /* Espaçamento inferior */
   }
 }
 
 @media screen and (max-width: 576px) {
   #s-habilidades .layout-grid #cartoes-habilidades article {
-    flex-basis: calc(50% - 16px); /* 2 cartões por linha em celulares */
-    margin-right: 16px; /* Espaçamento à direita */
+    flex-basis: 35%; /* Um cartão por linha */
     margin-bottom: 16px; /* Espaçamento inferior */
   }
 }
+
+/* Estilos para os cartões de Habilidades */
+#s-habilidades .layout-grid #cartoes-habilidades article {
+  background-color: #e4e2e2;
+  border: 1px solid #111111;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+/* Estilos para as imagens dentro dos cartões de Habilidades */
+#s-habilidades .layout-grid #cartoes-habilidades img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
 
 
 
