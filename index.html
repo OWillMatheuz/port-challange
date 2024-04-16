@@ -18,45 +18,46 @@
   </head>
   <body>
   <!-- Início do Menu -->
-<div class="all">
-  <section class="menu">
-    <!-- Cabeçalho com logo -->
-    <header>
-      <img class="logo" src="assets/img/logo-will-matheus.png" />
-    </header>
-    <!-- Navegação -->
-    <nav>
-      <!-- Botão do menu hamburger -->
-      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">
-        <i class="fas fa-bars"></i> <!-- Ícone do menu -->
-      </button>
-      
-      <!-- Lista do menu -->
-      <ul class="menu__list" id="menu-list">
-        <!-- Itens do menu -->
-        <li class="menu__list__item"><a href="#sobre">Sobre mim</a></li>
-        <li class="menu__list__item"><a href="#s-habilidades">Skills</a></li>
-        <li class="menu__list__item"><a href="#s-experience">Formações e Cursos</a></li>
-        <li class="menu__list__item"><a href="#s-projetos">Experiência</a></li>
-        <li class="menu__list__item"><a href="#contato">Contato</a></li>
-        <!-- Botão para baixar CV -->
-        <li class="menu__list__item">
-          <button id="gerar-pdf">Baixar CV</button>
-        </li>
+<!-- Cabeçalho com logo e menu -->
+<header class="menu">
+  <!-- Logo -->
+  <img class="logo" src="assets/img/logo-will-matheus.png" />
+  
+  <!-- Navegação -->
+  <nav>
+    <!-- Botão do menu hamburger -->
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">
+      <i class="fas fa-bars"></i> <!-- Ícone do menu -->
+    </button>
+    
+    <!-- Lista do menu -->
+    <ul class="menu__list" id="menu-list">
+      <!-- Itens do menu -->
+      <li class="menu__list__item"><a href="#sobre">Sobre mim</a></li>
+      <li class="menu__list__item"><a href="#s-habilidades">Skills</a></li>
+      <li class="menu__list__item"><a href="#s-experience">Formações e Cursos</a></li>
+      <li class="menu__list__item"><a href="#s-projetos">Experiência</a></li>
+      <li class="menu__list__item"><a href="#contato">Contato</a></li>
+      <!-- Botão para baixar CV -->
+      <li class="menu__list__item">
+        <button id="gerar-pdf">Baixar CV</button>
+      </li>
+    </ul>
+    
+    <!-- Menu dropdown -->
+    <div class="menu__dropdown" id="menu-dropdown">
+      <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#s-habilidades">Skills</a></li>
+        <li><a href="#s-experience">Formações e Cursos</a></li>
+        <li><a href="#s-projetos">Experiência</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
-      <!-- Menu dropdown -->
-      <div class="menu__dropdown" id="menu-dropdown">
-        <ul>
-          <li><a href="#sobre">Sobre mim</a></li>
-          <li><a href="#s-habilidades">Skills</a></li>
-          <li><a href="#s-experience">Formações e Cursos</a></li>
-          <li><a href="#s-projetos">Experiência</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-  </section>
-</div>
+    </div>
+  </nav>
+</header>
+
+
 
 
 

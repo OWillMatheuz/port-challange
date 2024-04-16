@@ -43,7 +43,7 @@ html {
 }
 
 /* Estilos para a seção de menu */
-section.menu {
+header.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
