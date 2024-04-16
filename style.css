@@ -16,14 +16,13 @@
 }
 
 /* Estilos globais para o corpo da página */
-body {
+body,
+html {
   background-color: var(--branco);
   font-family: var(--font-principal);
-  margin: 0;
-  padding: 0;
   line-height: 1;
-  width: 100%;
-  height: 100%;
+  scroll-behavior: smooth;
+  
 }
 
 /* Zerando margens e estilos de lista e parágrafos */
@@ -43,13 +42,6 @@ p {
 a {
   text-decoration: none;
   color: var(--preto);
-}
-
-/* Comportamento de rolagem suave */
-html {
-  scroll-behavior: smooth;
-  width: 100%;
-  height: 100%;
 }
 
 /* Estilos para a seção de menu */
@@ -536,9 +528,6 @@ section.title {
   border-color: #81e54e;
 }
 
-
-
-
 /* Estilos para a seção de Habilidades */
 #s-habilidades {
   padding: 96px 48px; /* Espaçamento interno */
@@ -588,7 +577,6 @@ section.title {
   gap: 16px; /* Espaçamento entre os itens */
   margin-left: auto; /* Centralização automática à esquerda */
   margin-right: auto; /* Centralização automática à direita */
-  max-width: 1200px; /* Largura máxima do container */
 }
 
 /* Estilos para os cartões de Habilidades */
@@ -645,24 +633,6 @@ section.title {
     flex-basis: 35%; /* Um cartão por linha */
     margin-bottom: 16px; /* Espaçamento inferior */
   }
-}
-
-/* Estilos para os cartões de Habilidades */
-#s-habilidades .layout-grid #cartoes-habilidades article {
-  background-color: #e4e2e2;
-  border: 1px solid #111111;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 16px;
-  margin-bottom: 16px;
-}
-
-/* Estilos para as imagens dentro dos cartões de Habilidades */
-#s-habilidades .layout-grid #cartoes-habilidades img {
-  width: 40px;
-  height: 40px;
 }
 
 /* Estilos para elementos ocultos */
@@ -757,13 +727,6 @@ section.title {
   color: var(--branco); /* Cor do texto */
 }
 
-/* Estilos responsivos para a seção de Experiência */
-@media screen and (max-width: 992px) {
-  #s-experience {
-    padding: 48px 24px; /* Espaçamento interno reduzido */
-  }
-}
-
 @media screen and (max-width: 768px) {
   #s-experience .grid-layout #experience .opcao-formacao {
     flex-direction: column; /* Altera a direção para coluna */
@@ -773,86 +736,6 @@ section.title {
   #s-experience .grid-layout #experience .empresa {
     margin-bottom: 12px; /* Espaçamento inferior */
   }
-}
-
-/* Estilos para a seção de Experiência */
-#s-experience {
-  padding: 96px 48px; /* Espaçamento interno */
-  background-color: var(--preto); /* Cor de fundo */
-  text-align: center; /* Centralização do conteúdo */
-}
-
-/* Estilos para o título da seção de Experiência */
-#s-experience .grid-layout h2 {
-  padding-bottom: 24px; /* Espaçamento inferior */
-  color: var(--branco); /* Cor do texto */
-  font-size: 4rem; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-}
-
-/* Estilos para o span dentro do título da seção de Experiência */
-#s-experience .grid-layout h2 span {
-  color: var(--verde-claro); /* Cor especial para o span */
-}
-
-/* Estilos para o container de Experiência */
-#s-experience .grid-layout #experience {
-  margin: 24px 0px; /* Margem superior e inferior */
-  display: flex; /* Container flexível */
-  justify-content: center; /* Centralização horizontal */
-  align-items: center; /* Centralização vertical */
-  flex-direction: column; /* Direção da disposição dos itens */
-}
-
-/* Estilos para as opções de formação */
-#s-experience .grid-layout #experience .opcao-formacao {
-  display: flex; /* Container flexível */
-  gap: 16px; /* Espaçamento entre os itens */
-  margin-bottom: 20px; /* Espaçamento inferior */
-}
-
-/* Estilos para as empresas de formação */
-#s-experience .grid-layout #experience .empresa {
-  padding: 8px 16px; /* Espaçamento interno */
-  background-color: #959595; /* Cor de fundo */
-  border-radius: 8px; /* Borda arredondada */
-  transition: background-color 0.3s ease; /* Transição suave */
-}
-
-#s-experience .grid-layout #experience .empresa:hover {
-  background-color: var(--verde-claro); /* Cor de fundo ao passar o mouse */
-}
-
-/* Estilos para o texto de formação */
-#s-experience .grid-layout .texto-formacao {
-  max-width: 800px; /* Largura máxima */
-  text-align: left; /* Alinhamento à esquerda */
-  margin-top: 20px; /* Espaçamento superior */
-}
-
-/* Estilos para o título da formação */
-#s-experience .grid-layout .tituloFormacao {
-  color: var(--branco); /* Cor do texto */
-  font-size: 2rem; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-}
-
-/* Estilos para a data da formação */
-#s-experience .grid-layout .dataFormacao {
-  color: #6c6c6c; /* Cor do texto */
-  margin-bottom: 16px; /* Espaçamento inferior */
-}
-
-/* Estilos para a empresa da formação */
-#s-experience .grid-layout .empresaFormacao {
-  color: var(--verde-claro); /* Cor do texto */
-  font-weight: 500; /* Peso da fonte */
-  margin-bottom: 8px; /* Espaçamento inferior */
-}
-
-/* Estilos para o link de mudar descrição */
-#s-experience .grid-layout .mudarDescricao {
-  color: var(--branco); /* Cor do texto */
 }
 
 /**/
@@ -878,18 +761,17 @@ section.title {
   font-weight: 500; /* Peso da fonte */
 }
 
-/* Estilos para os links da seção de Projetos */
-#s-projetos .grid-layout a {
+/* Estilos para os links e span da seção de Projetos */
+#s-projetos .grid-layout a,
+#s-projetos .grid-layout span {
   padding-bottom: 24px; /* Espaçamento inferior */
   color: var(--verde-claro); /* Cor do texto */
   font-size: 1rem; /* Tamanho da fonte */
   font-weight: 500; /* Peso da fonte */
-  text-decoration: underline; /* Sublinhado */
 }
 
-/* Estilos para o span da seção de Projetos */
-#s-projetos .grid-layout span {
-  color: var(--verde-claro); /* Cor do texto */
+#s-projetos .grid-layout a {
+  text-decoration: underline; /* Sublinhado */
 }
 
 /* Estilos para o container de Projetos */
@@ -925,252 +807,156 @@ section.title {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #s-projetos .grid-layout #projetos > article {
-    flex-basis: calc(100% - 20px); /* 1 projeto por linha */
-  }
-}
-
-/* Estilos para os títulos dos projetos */
-#s-projetos .grid-layout #projetos > article h3 {
-  color: #fff; /* Cor do texto */
-  font-size: 2.4rem; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-}
-
-/* Estilos para os textos dos projetos */
-#s-projetos .grid-layout #projetos > article p {
-  line-height: 24px; /* Altura da linha */
-  margin: 24px 0px; /* Margem */
-  color: #9ca3af; /* Cor do texto */
-  line-height: 3.2rem; /* Altura da linha */
-  font-size: 1.8rem; /* Tamanho da fonte */
-}
-
-/* Estilos para a seção de Projetos */
-#s-projetos {
-  padding: 96px 48px; /* Espaçamento interno */
-  text-align: center; /* Centralização do conteúdo */
-  background-color: #111; /* Cor de fundo */
-}
-
-/* Estilos responsivos para a seção de Projetos */
-@media screen and (max-width: 992px) {
-  #s-projetos {
-    padding: 48px 24px; /* Espaçamento interno reduzido */
-  }
-}
-
-/* Estilos para o título da seção de Projetos */
-#s-projetos .grid-layout h2 {
-  padding-bottom: 24px; /* Espaçamento inferior */
-  color: #fff; /* Cor do texto */
-  font-size: 4rem; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-}
-
-/* Estilos para os links da seção de Projetos */
-#s-projetos .grid-layout a {
-  padding-bottom: 24px; /* Espaçamento inferior */
-  color: var(--verde-claro); /* Cor do texto */
-  font-size: 1rem; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-  text-decoration: underline; /* Sublinhado */
-}
-
-/* Estilos para o span da seção de Projetos */
-#s-projetos .grid-layout span {
-  color: var(--verde-claro); /* Cor do texto */
-}
-
-/* Estilos para o container de Projetos */
-#s-projetos .grid-layout #projetos {
-  margin: 24px 0px; /* Margem superior e inferior */
-  display: flex; /* Container flexível */
-  justify-content: space-between; /* Espaçamento uniforme entre os itens */
-  align-items: stretch; /* Alinhamento vertical */
-  flex-wrap: wrap; /* Quebra de linha automática */
-  text-align: left; /* Alinhamento à esquerda */
-}
-
-/* Estilos para os projetos */
-#s-projetos .grid-layout #projetos > article {
-  height: auto; /* Altura automática */
-  padding: 32px; /* Espaçamento interno */
-  margin: 8px; /* Margem */
-  flex-basis: calc(33% - 20px); /* Base flexível */
-  flex-grow: 1; /* Crescimento flexível */
-  border: 1px solid #111; /* Borda */
-  transition: 1s all ease; /* Transição suave */
-  background-color: #151515; /* Cor de fundo */
-}
-
-#s-projetos .grid-layout #projetos > article:hover {
-  border: 1px solid #00bf63; /* Borda ao passar o mouse */
-}
-
-/* Estilos responsivos para os projetos */
-@media screen and (max-width: 992px) {
-  #s-projetos .grid-layout #projetos > article {
-    flex-basis: calc(50% - 20px); /* 2 projetos por linha */
-  }
-}
-
 @media screen and (max-width: 576px) {
   #s-projetos .grid-layout #projetos > article {
     flex-basis: calc(100% - 20px); /* 1 projeto por linha */
   }
 }
 
-/* Estilos para os títulos dos projetos */
-#s-projetos .grid-layout #projetos > article h3 {
+/* Estilos para os títulos e textos dos projetos */
+#s-projetos .grid-layout #projetos > article h3,
+#s-projetos .grid-layout #projetos > article p {
   color: #fff; /* Cor do texto */
+}
+
+#s-projetos .grid-layout #projetos > article h3 {
   font-size: 2.4rem; /* Tamanho da fonte */
   font-weight: 500; /* Peso da fonte */
 }
 
-/* Estilos para os textos dos projetos */
 #s-projetos .grid-layout #projetos > article p {
   line-height: 24px; /* Altura da linha */
   margin: 24px 0px; /* Margem */
-  color: #9ca3af; /* Cor do texto */
   line-height: 3.2rem; /* Altura da linha */
   font-size: 1.8rem; /* Tamanho da fonte */
 }
 
 /* Estilos para a seção de Contato */
 .contato {
-  display: flex; /* Container flexível */
-  flex-direction: column; /* Direção dos itens */
-  align-items: center; /* Alinhamento vertical */
-  padding: 60px 0; /* Espaçamento interno */
-  background-color: var(--branco); /* Cor de fundo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  background-color: var(--branco);
 }
 
-/* Estilos para o título da seção de Contato */
 .contato h2 {
-  font-size: 2.5em; /* Tamanho da fonte */
-  font-weight: 600; /* Peso da fonte */
-  color: var(--preto); /* Cor do texto */
-  margin-bottom: 20px; /* Espaçamento inferior */
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--preto);
+  margin-bottom: 20px;
 }
 
-/* Estilos para o texto da seção de Contato */
 .contato p {
-  font-size: 1.2em; /* Tamanho da fonte */
-  color: var(--cinza); /* Cor do texto */
-  margin-bottom: 40px; /* Espaçamento inferior */
+  font-size: 1.2em;
+  color: var(--cinza);
+  margin-bottom: 40px;
 }
 
 /* Estilos para o formulário */
 .form {
-  width: 100%; /* Largura */
-  max-width: 600px; /* Largura máxima */
-  margin: 40px auto; /* Margem */
-  background-color: var(--branco); /* Cor de fundo */
-  padding: 30px; /* Espaçamento interno */
-  border-radius: 8px; /* Borda arredondada */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para as etiquetas do formulário */
-form label {
-  font-size: 1.2em; /* Tamanho da fonte */
-  color: var(--cinza); /* Cor do texto */
-  margin-bottom: 8px; /* Espaçamento inferior */
+.form label {
+  font-size: 1.2em;
+  color: var(--cinza);
+  margin-bottom: 8px;
 }
 
-/* Estilos para os campos do formulário */
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  box-sizing: border-box; /* Inclui padding e borda na largura total */
-  width: 100%; /* Largura */
-  padding: 12px; /* Espaçamento interno */
-  margin-bottom: 20px; /* Espaçamento inferior */
-  border: 1px solid var(--cinza); /* Borda */
-  border-radius: 4px; /* Borda arredondada */
-  font-size: 1em; /* Tamanho da fonte */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--cinza);
+  border-radius: 4px;
+  font-size: 1em;
 }
 
-/* Estilos para o botão de envio do formulário */
-form input[type="submit"] {
-  box-sizing: border-box; /* Inclui padding e borda na largura total */
-  padding: 12px 20px; /* Espaçamento interno */
-  border: none; /* Sem borda */
-  border-radius: 4px; /* Borda arredondada */
-  background-color: var(--preto); /* Cor de fundo */
-  color: var(--branco); /* Cor do texto */
-  font-size: 1em; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor do mouse */
-  transition: background-color 0.3s ease; /* Transição suave */
+.form input[type="submit"] {
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--preto);
+  color: var(--branco);
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-form input[type="submit"]:hover {
-  background-color: var(--verde-claro); /* Cor de fundo ao passar o mouse */
+.form input[type="submit"]:hover {
+  background-color: var(--verde-claro);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .contato {
-    padding: 40px 20px; /* Espaçamento interno reduzido */
+    padding: 40px 20px;
   }
 
   .form {
-    padding: 10px; /* Espaçamento interno reduzido */
-    margin: 20px 0; /* Margem reduzida */
+    padding: 10px;
+    margin: 20px 0;
   }
 
-  form label,
-  form input[type="text"],
-  form input[type="email"],
-  form textarea,
-  form input[type="submit"] {
-    font-size: 0.9em; /* Reduzindo o tamanho da fonte para telas menores */
+  .form label,
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea,
+  .form input[type="submit"] {
+    font-size: 0.9em;
   }
 }
 
 /* Estilos para o rodapé */
 .footer {
-  background-color: var(--cinza); /* Cor de fundo */
-  color: var(--branco); /* Cor do texto */
-  padding: 20px 0; /* Espaçamento interno */
-  font-size: 1em; /* Tamanho da fonte */
-  text-align: center; /* Centralizar texto */
+  background-color: var(--cinza);
+  color: var(--branco);
+  padding: 20px 0;
+  font-size: 1em;
+  text-align: center;
+  border-top: 1px solid var(--cinza); /* Adiciona uma borda no topo */
 }
 
-/* Estilos para o conteúdo do rodapé */
 .footer-content {
-  display: flex; /* Container flexível */
-  flex-direction: column; /* Direção dos itens */
-  justify-content: center; /* Alinhamento vertical */
-  align-items: center; /* Alinhamento horizontal */
-  max-width: 1200px; /* Largura máxima */
-  margin: 0 auto; /* Margem */
-  padding: 0 20px; /* Espaçamento interno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Estilos para o lado esquerdo do rodapé */
-.footer-left {
-  margin-bottom: 10px; /* Espaçamento inferior */
+.footer-left,
+.footer-right {
+  margin-bottom: 10px;
 }
 
-/* Estilos para o logo do rodapé */
 .footer-logo {
-  max-width: 80px; /* Largura máxima */
-  height: auto; /* Altura automática */
-  background-color: transparent; /* Cor de fundo transparente */
-  margin-top: 10px; /* Espaçamento superior */
+  max-width: 80px;
+  height: auto;
+  background-color: transparent;
+  margin-top: 10px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column; /* Direção dos itens alterada para coluna */
+    flex-direction: column;
   }
 
   .footer-left,
   .footer-right {
-    margin-bottom: 10px; /* Espaçamento inferior */
+    margin-bottom: 10px;
   }
 }
