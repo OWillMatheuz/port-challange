@@ -5,13 +5,14 @@
   --verde-escuro: #4f6f52;
   --cinza: #464646;
   --preto: #000000;
+  --branco: #ffffff;
   --font-principal: "Raleway", sans-serif;
 }
 
 /* Estilos globais para o corpo da página */
 body {
   box-sizing: border-box;
-  background-color: var(--bege);
+  background-color: var(--branco);
   font-family: var(--font-principal);
   margin: 0;
   padding: 0;
