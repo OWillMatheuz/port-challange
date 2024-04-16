@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Configuração de metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Willian Matheus" />
+    <meta
+      name="description"
+      content="Meu nome é Willian, desenvolvo interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO."
+    />
+    <!-- Importação da folha de estilo -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Título da página -->
+    <title>Portfólio Willian Matheus</title>
+  </head>
+  <body>
+    <!-- Início do Menu -->
+    <div class="all">
+      <section class="menu">
+        <!-- Cabeçalho com logo -->
+        <header>
+          <img class="logo" src="assets/img/logo-will-matheus.png" />
+        </header>
+        <!-- Navegação -->
+        <nav>
+          <ul class="menu__list">
+            <!-- Itens do menu -->
+            <li class="menu__list__item"><a href="#sobre">Sobre mim</a></li>
+            <li class="menu__list__item">
+              <a href="#s-habilidades">Skills</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#s-experience">Formações e Cursos</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#s-projetos">Experiência</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#contato">Contato</a>
+            </li>
+            <!-- Botão para baixar CV -->
+            <li class="menu__list__item">
+              <button id="gerar-pdf">Baixar CV</button>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Cabeçalho -->
+      <section class="title">
+        <!-- Div com foto e descrição -->
+        <div class="title__div">
+          <img
+            class="title__profile"
+            src="assets/img/perfil-will-matheus.jpeg"
+          />
+          <div class="title__container" id="#sobremim">
+            <!-- Bio e subtítulo -->
+            <h2 class="title__bio">
+              Olá! Sou Willian, um Iniciante empolgado em
+              <span class="destaque">Desenvolvimento Frontend</span>, um
+              <span class="destaque">eterno aprendiz</span>.
+            </h2>
+            <h3 class="title__subsection">
+              Me formei em um bootcamp como dev. web java full-stack, estudando
+              na DevMedia como Frontend e participando do projeto Oracle ONE na
+              Alura.
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre Mim -->
+      <section id="sobre">
+        <div class="layout-grader">
+          <!-- Divisão do conteúdo -->
+          <div>
+            <!-- Título e descrição -->
+            <div id="foto-criador" class="revelar-medio-atraso">
+              <h3 class="revelar-extra-grande-atraso">Aprendiz Frontend</h3>
+            </div>
+            <div>
+              <h4 class="revelar-medio-atraso">Quem sou</h4>
+              <h2 class="revelar-pequeno-atraso">Willian Matheus</h2>
+              <h3 class="revelar-medio-atraso">Frontend Developer</h3>
+              <!-- Parágrafo sobre o autor -->
+              <p class="revelar-grande-atraso">
+                Meu nome é Willian Matheus, moro em São Paulo, e atualmente sou
+                motoboy. Estudo desenvolvimento web desde 2018, mas parei por
+                várias vezes. E em 2022 voltei novamente com muito foco, e me
+                formei em um bootcamp como dev. web java full-stack jr. Dei uma
+                grande partida nos estudos, onde atualmente estudo na Devmedia e
+                no projeto ONE da Oracle e Alura. Atualmente faço algumas
+                criações de sites em Wordpress e também com codigos
+                personalizados para manter minha renda.
+              </p>
+              <!-- Links de redes sociais -->
+              <nav class="revelar-grande-atraso">
+                <ul>
+                  <!-- Ícones das redes sociais -->
+                  <a
+                    href="https://www.instagram.com/iuricode/"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <li>
+                      <img
+                        src="assets/img/3721672-instagram_108066.png"
+                        alt="Ícone do Instagram"
+                        onload="SVGInject(this)"
+                      />
+                    </li>
+                  </a>
+                  <!-- Ícone do LinkedIn -->
+                  <a
+                    href="https://www.linkedin.com/in/iuricode/"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <li>
+                      <img
+                        src="assets/img/linkedin_socialnetwork_17441.png"
+                        alt="Ícone do LinkedIn"
+                        onload="SVGInject(this)"
+                      />
+                    </li>
+                  </a>
+                  <!-- Ícone do Discord -->
+                  <a
+                    href="https://discord.gg/uHWE7QbXnp"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <li>
+                      <img
+                        src="assets/img/discord_icon_130958.png"
+                        alt="Ícone do Discord"
+                        onload="SVGInject(this)"
+                      />
+                    </li>
+                  </a>
+                  <!-- Ícone do GitHub -->
+                  <a
+                    href="https://github.com/OWillMatheuz"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <li>
+                      <img
+                        src="assets/img/github_alt_macos_bigsur_icon_190138.png"
+                        alt="Ícone do GitHub"
+                        onload="SVGInject(this)"
+                      />
+                    </li>
+                  </a>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="s-habilidades">
+        <div class="layout-grid">
+          <div id="habilidades">
+            <!-- Título das habilidades -->
+            <article id="texto-habilidades">
+              <h2 class="delaySmallReveal">Skills<span>.</span></h2>
+            </article>
+            <!-- Ícones das habilidades -->
+            <div id="cartoes-habilidades">
+              <!-- Ícone HTML -->
+              <article class="html intervaloCartaoRevelar">
+                <img
+                  src="assets/img/file_type_html_icon_130541.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do html"
+                />
+              </article>
+              <!-- Ícone CSS -->
+              <article class="css intervaloCartaoRevelar">
+                <img
+                  src="assets/img/file_type_css_icon_130661.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do css"
+                />
+              </article>
+              <!-- Ícone JS -->
+              <article class="js intervaloCartaoRevelar">
+                <img
+                  src="assets/img/javascript_icon_130900.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do javascript"
+                />
+              </article>
+              <!-- Ícone Java -->
+              <article class="java intervaloCartaoRevelar">
+                <img
+                  src="assets/img/java_original_wordmark_logo_icon_146459.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do java"
+                />
+              </article>
+              <!-- Ícone React -->
+              <article class="react intervaloCartaoRevelar">
+                <img
+                  src="assets/img/react_icon_130845.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do react"
+                />
+              </article>
+              <!-- Ícone Node -->
+              <article class="node intervaloCartaoRevelar">
+                <img
+                  src="assets/img/file_type_node_icon_130301.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do node"
+                />
+              </article>
+              <!-- Ícone TypeScript -->
+              <article class="typescript intervaloCartaoRevelar">
+                <img
+                  src="assets/img/file_type_typescript_official_icon_130107.png"
+                  width="60px"
+                  height="60px"
+                  alt="ícone do typescript"
+                />
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formações e Cursos -->
+      <section id="s-experience">
+        <div class="grid-layout">
+          <!-- Título das formações -->
+          <h2 class="delaySmallReveal">Formação Acadêmica<span>.</span></h2>
+          <div id="experience">
+            <!-- Empresas/formações -->
+            <div
+              class="opcao-formacao intervalCardReveal"
+              id="experience-company"
+            >
+              <!-- Empresa: Curso em Vídeo -->
+              <div class="empresa Curso-em-Video ativo">
+                <h3>Curso em Vídeo</h3>
+              </div>
+              <!-- Empresa: Generation Brasil -->
+              <div class="empresa Generation-Brasil">
+                <h3>Generation Brasil</h3>
+              </div>
+              <!-- Empresa: One - Oracle Next Education e Alura -->
+              <div class="empresa One-Oracle-Next-Education">
+                <h3>One - Oracle Next Education e Alura</h3>
+              </div>
+              <!-- Empresa: DevMedia -->
+              <div class="empresa DevMedia">
+                <h3>DevMedia</h3>
+              </div>
+            </div>
+            <!-- Descrições das formações -->
+            <div class="texto-formacao intervalCardReveal">
+              <!-- Curso em Vídeo -->
+              <div>
+                <h4 class="tituloFormacao">
+                  Curso em Vídeo - Gustavo Guanabara
+                </h4>
+                <p class="dataFormacao">Em andamento - 2022</p>
+                <p class="mudarDescricao">
+                  Comecei em 2018 e parei. Voltei em 2022 os cursos da
+                  plataforma curso em vídeo com html / css / javascript / java /
+                  php
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos -->
+      <section id="s-projetos">
+        <div class="grid-layout">
+          <!-- Título dos projetos -->
+          <h2 class="delaySmallReveal">Projetos <span>.</span></h2>
+          <div id="projetos">
+            <!-- Projeto: Blog Pessoal -->
+            <article class="intervalCardReveal blogpessoal">
+              <h3>Blog Pessoal</h3>
+              <p>
+                Blog pessoal <br />
+                Aplicação: Java | Springboot | React | Typescript
+              </p>
+              <a
+                href="https://candid-mermaid-cb3fc0.netlify.app/"
+                rel="noopener"
+                target="_blank"
+                id="blogpessoal"
+                >Visualizar projeto
+              </a>
+            </article>
+            <!-- Projeto: Projeto Integrador -->
+            <article class="intervalCardReveal projeto">
+              <h3>Projeto Integrador</h3>
+              <p>
+                Projeto feito em equipe do curso Generation Brasil. O projeto
+                tem como finalidade de criar á Redução das desigualdades no ...
+              </p>
+              <a
+                href="https://projetovagalume.netlify.app"
+                rel="noopener"
+                target="_blank"
+                id="projeto"
+                >Visualizar projeto
+              </a>
+            </article>
+            <!-- Projeto: Meus Valores -->
+            <article class="intervalCardReveal meusvalores">
+              <h3>Meus Valores</h3>
+              <p>
+                Projeto em que desenvolvi para contar os valores, os km e
+                colocar metas de entregas. Trabalhava na Zé Delivery e vi a
+                necessidade de contar as entregas com valores e km. Skills:
+                React | Typescript
+              </p>
+              <a
+                href="https://meusvalores.netlify.app/"
+                rel="noopener"
+                target="_blank"
+                id="meusvalores"
+                >Visualizar projeto
+              </a>
+            </article>
+            <!-- Projeto: Número Secreto -->
+            <article class="intervalCardReveal numerosecreto">
+              <h3>Número Secreto</h3>
+              <p>
+                Projeto desenvolvido durante o curso do Projeto One - Oracle
+                Next Education e Alura. <br />
+                Skills: Html | Css | Javascript
+              </p>
+              <a
+                href="https://numerosecreto-ecru.vercel.app/"
+                rel="noopener"
+                target="_blank"
+                id="numerosecreto"
+                >Visualizar projeto
+              </a>
+            </article>
+            <!-- Projeto: Encriptador -->
+            <article class="intervalCardReveal encriptador">
+              <h3>Encriptador</h3>
+              <p>
+                Projeto desenvolvido durante o curso do Projeto One - Oracle
+                Next Education. <br />
+                Skills: Html | Css | Javascript
+              </p>
+              <a
+                href="https://owillmatheuz.github.io/challange-encriptador/"
+                rel="noopener"
+                target="_blank"
+                id="encriptador"
+                >Visualizar projeto
+              </a>
+            </article>
+            <!-- Projeto: Sistema de Vistoria -->
+            <article class="intervalCardReveal none">
+              <h3>Sistema de Vistoria</h3>
+              <p>
+                Pequeno projeto que criei para contagem de vistorias para minha
+                esposa usar durante o trabalho dela. Faz contagem por tipos,
+                usando if e else, guarda em histórico usando localstorage, e
+                também exporta para PDF. <br />
+                Skills: Html | Css | Javascript
+              </p>
+              <a
+                href="https://sistema-vistorias.vercel.app/"
+                rel="noopener"
+                target="_blank"
+                id="sistema"
+                >Visualizar projeto
+              </a>
+            </article>
+          </div>
+          <!-- Link para repositórios no GitHub -->
+          <a
+            href="https://github.com/OWillMatheuz"
+            rel="noopener"
+            target="_blank"
+            class="delayExtraBigReveal"
+            >Repositórios no GitHub</a
+          >
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="contato">
+        <!-- Cidade -->
+        <h2>Cidade</h2>
+        <p>São Paulo - SP</p>
+        <!-- Título de contato -->
+        <h2>Entre em contato</h2>
+      </section>
+      <!-- Formulário de contato -->
+      <section class="form">
+        <form action="" method="post" id="form">
+          <!-- Campo de nome -->
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            placeholder="Insira seu nome aqui"
+            id="name"
+            required
+          />
+          <!-- Campo de email -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            placeholder="Insira seu email aqui"
+            id="email"
+            required
+          />
+          <!-- Campo de mensagem -->
+          <label for="menssagem">Mensagem:</label>
+          <textarea
+            name="mensagem"
+            id="menssagem"
+            cols="30"
+            rows="10"
+            placeholder="Insira sua mensagem aqui"
+            required
+          ></textarea>
+          <!-- Botão de envio -->
+          <input type="submit" value="Enviar" id="botao" />
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Conteúdo do footer -->
+        <div class="footer-content">
+          <!-- Texto esquerdo -->
+          <div class="footer-left">Desenvolvido por Willian Matheus</div>
+          <!-- Logo -->
+          <div class="footer-right">
+            <img
+              src="assets/img/logo-will-matheus-removebg-preview.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Scripts -->
+    <!-- Biblioteca para geração de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- Script para alterar experiência -->
+    <script src="hoverChangeExperience.js"></script>
+    <!-- Script para geração de PDF -->
+    <script src="geraPdf.js"></script>
+    <!-- Script para validação de formulário -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript" src="validacao.js"></script>
+    <!-- Verificação de carregamento do EmailJS -->
+    <script>
+      console.log("EmailJS carregado:", typeof emailjs !== "undefined");
+    </script>
+  </body>
+</html>

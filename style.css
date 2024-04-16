@@ -1,0 +1,820 @@
+/* Definindo variáveis de cores e fontes globais */
+:root {
+  --branco: #f3eeea;
+  --verde-claro: #00bf63;
+  --verde-escuro: #4f6f52;
+  --cinza: #464646;
+  --preto: #000000;
+  --font-principal: "Raleway", sans-serif;
+}
+
+/* Estilos globais para o corpo da página */
+body {
+  box-sizing: border-box;
+  background-color: var(
+    --bege
+  ); /* Erro: a variável '--bege' não foi definida */
+  font-family: var(--font-principal);
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Zerando margens e estilos de lista e parágrafos */
+ol,
+ul,
+li,
+h2,
+h3,
+h4,
+p {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para links */
+a {
+  text-decoration: none;
+  color: var(--preto);
+}
+
+/* Comportamento de rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos para a div com classe 'all' */
+div.all {
+  color: var(--preto);
+  box-sizing: border-box;
+}
+
+/* Estilos para a seção de menu */
+section.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0; /* Ajuste para zero */
+  padding: 16px 64px;
+}
+
+/* Estilos para a logo */
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+/* Estilos para a lista do menu */
+.menu__list {
+  display: flex;
+  gap: 32px;
+}
+
+/* Estilos para itens da lista do menu */
+.menu__list__item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para links dentro dos itens do menu */
+.menu__list__item a {
+  text-decoration: none;
+  color: var(--preto);
+  font-size: 1.1rem;
+}
+
+/* Estilos de hover para links do menu */
+.menu__list__item a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--verde-escuro);
+}
+
+/* Estilos para botões dentro dos itens do menu */
+.menu__list__item button {
+  background-color: #00bf63;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Estilos de hover para botões do menu */
+.menu__list__item button:hover {
+  background-color: #00a855;
+}
+
+/* Estilos para o título no menu */
+.menu__title {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+/* Estilos para a seção de menu em dispositivos menores */
+@media screen and (max-width: 768px) {
+  section.menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .logo {
+    margin-bottom: 16px;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .menu__list__item {
+    margin-bottom: 8px;
+  }
+
+  .menu__list__item button {
+    width: 100%;
+  }
+}
+
+/* Estilos para a seção de título */
+section.title {
+  margin: 24px 130px; /* Margens superior e inferior de 24px e laterais de 130px */
+  margin-bottom: 70px; /* Margem inferior adicional */
+}
+
+/* Estilos para o container do título */
+.title__div {
+  display: flex;
+  flex-direction: row-reverse; /* Alinhamento dos itens em linha e reverso */
+  justify-content: space-around; /* Espaçamento uniforme dos itens */
+  align-items: center; /* Centralização vertical dos itens */
+}
+
+/* Estilos para a imagem de perfil */
+.title__profile {
+  width: 320px;
+  height: 320px;
+  border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%; /* Forma especial do bordo */
+  animation: flow 4s infinite ease-in-out; /* Animação personalizada */
+}
+
+/* Animação de alteração do bordo */
+@keyframes flow {
+  0% {
+    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
+  }
+  35% {
+    border-radius: 80% 70% 60% 60% /80% 70% 60% 60%;
+  }
+  75% {
+    border-radius: 70% 90% 60% 70% / 80% 90% 50% 90%;
+  }
+  100% {
+    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
+  }
+}
+
+/* Estilos para o container do título */
+.title__container {
+  margin-right: 50px; /* Margem à direita */
+}
+
+/* Estilos para a biografia no título */
+.title__bio {
+  margin-bottom: 24px;
+  font-size: 3.25rem;
+}
+
+/* Estilos para o texto destacado */
+.destaque {
+  color: var(--verde-claro);
+  font-weight: bold;
+}
+
+/* Estilos para a subseção do título */
+.title__subsection {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+
+/* Estilos para a rede social no título */
+.title__network {
+  display: flex;
+  justify-content: space-around; /* Espaçamento uniforme dos itens */
+}
+
+/* Estilos para itens da rede social */
+.title__network__item {
+  list-style: none; /* Remove os marcadores de lista */
+}
+
+/* Estilos para links da rede social */
+.title__network__item a {
+  text-decoration: none;
+  color: var(--preto);
+  font-size: 1rem;
+}
+
+/* Estilos para imagens dentro dos itens da rede social */
+.title__network__item img {
+  vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+  margin-left: 1px; /* Adiciona um pequeno espaço entre o texto e a imagem */
+}
+
+/* Estilos para a seção 'Sobre' */
+#sobre {
+  padding: 72px 0px;
+  background-color: #111;
+}
+
+/* Estilos responsivos para a seção 'Sobre' */
+@media screen and (max-width: 1200px) {
+  #sobre {
+    padding: 72px 20px;
+  }
+}
+
+/* Estilos para o container do layout 'Sobre' */
+#sobre .layout-grader > div {
+  background-color: #151515;
+  border: 2px solid #1f1f1f;
+  padding: 24px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+/* Estilos responsivos para o container do layout 'Sobre' */
+@media screen and (max-width: 1200px) {
+  #sobre .layout-grader > div {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+/* Estilos para a imagem do criador no layout 'Sobre' */
+#sobre .layout-grader > div #foto-criador {
+  width: 47%;
+  background-image: url("assets/img/sobre-mim.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 44px;
+  height: 500px;
+}
+
+/* Estilos responsivos para a imagem do criador */
+@media screen and (max-width: 1200px) {
+  #sobre .layout-grader > div #foto-criador {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/* Estilos responsivos adicionais para a imagem do criador */
+@media screen and (max-width: 992px) {
+  #sobre .layout-grader > div #foto-criador {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sobre .layout-grader > div #foto-criador {
+    height: 300px;
+  }
+}
+
+/* Estilos para o título dentro do container do layout 'Sobre' */
+#sobre .layout-grader > div #foto-criador h3 {
+  color: #111;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 16px;
+  width: 180px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 16px;
+}
+
+/* Estilos para a segunda div dentro do container do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) {
+  width: 49%;
+}
+
+/* Estilos responsivos para a segunda div do layout 'Sobre' */
+@media screen and (max-width: 1200px) {
+  #sobre .layout-grader > div div:nth-child(2) {
+    width: 100%;
+  }
+}
+
+/* Estilos para o título H2 dentro da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 16px 0px;
+  color: #fff;
+}
+
+/* Estilos responsivos para o título H2 */
+@media screen and (max-width: 992px) {
+  #sobre .layout-grader > div div:nth-child(2) h2 {
+    font-size: 3.2rem;
+  }
+}
+
+/* Estilos para o título H3 dentro da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+/* Estilos para o título H4 dentro da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--verde-claro);
+}
+
+/* Estilos para o parágrafo dentro da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) p {
+  font-size: 1.8rem;
+  color: #9ca3af;
+  line-height: 160%;
+  margin: 32px 0px 48px 0px;
+}
+
+/* Estilos para a lista dentro da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) nav ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style-type: none;
+}
+
+/* Estilos responsivos para a lista */
+@media screen and (max-width: 1200px) {
+  #sobre .layout-grader > div div:nth-child(2) nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* Estilos para os links dentro da lista da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) nav ul a {
+  background-color: #111;
+  border: 2px solid #1f1f1f;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+/* Estilos para as imagens dentro dos links da lista da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) nav ul a img {
+  width: 32px;
+  height: 32px; /* Mantém proporção da imagem */
+}
+
+/* Estilos responsivos para as imagens */
+@media screen and (max-width: 1200px) {
+  #sobre .layout-grader > div div:nth-child(2) nav ul a img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Estilos de hover para os links da lista da segunda div do layout 'Sobre' */
+#sobre .layout-grader > div div:nth-child(2) nav ul a:hover {
+  border-color: #81e54e;
+}
+
+/* Estilos para a seção 'Sobre' em dispositivos menores */
+@media screen and (max-width: 768px) {
+  #sobre {
+    padding: 48px 16px; /* Adiciona padding para dispositivos menores */
+  }
+
+  #sobre .layout-grader > div {
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens na vertical */
+  }
+
+  #sobre .layout-grader > div #foto-criador {
+    width: 100%;
+    height: auto; /* Remove a altura fixa */
+    max-width: 300px; /* Limita a largura da imagem */
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+
+  #sobre .layout-grader > div div:nth-child(2) {
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+  }
+
+  #sobre .layout-grader > div div:nth-child(2) h2 {
+    font-size: 2.5rem;
+  }
+
+  #sobre .layout-grader > div div:nth-child(2) h3,
+  #sobre .layout-grader > div div:nth-child(2) h4,
+  #sobre .layout-grader > div div:nth-child(2) p {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Estilos para a seção de Habilidades */
+#s-habilidades {
+  padding: 96px 48px; /* Espaçamento interno */
+  background-color: #eae9e9; /* Cor de fundo */
+  text-align: center; /* Centralização do conteúdo */
+}
+
+/* Estilos responsivos para a seção de Habilidades */
+@media screen and (max-width: 992px) {
+  #s-habilidades {
+    padding: 48px 24px; /* Espaçamento interno reduzido */
+  }
+}
+
+/* Estilos para o título da seção de Habilidades */
+#s-habilidades .layout-grid h2 {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: #000000; /* Cor do texto */
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para o span dentro do título da seção de Habilidades */
+#s-habilidades .layout-grid h2 span {
+  color: var(--verde-claro); /* Cor especial para o span */
+}
+
+/* Estilos para o container de Habilidades */
+#s-habilidades .layout-grid #habilidades {
+  margin: 24px 0px; /* Margem superior e inferior */
+  display: flex; /* Container flexível */
+  justify-content: space-between; /* Espaçamento uniforme entre os itens */
+  align-items: stretch; /* Alinhamento vertical dos itens */
+  flex-wrap: wrap; /* Quebra de linha automática */
+}
+
+/* Estilos para o texto sobre Habilidades */
+#s-habilidades .layout-grid #texto-habilidades {
+  flex-basis: 100%; /* Base flexível para ocupar a largura total */
+  margin-bottom: 24px; /* Margem inferior */
+}
+
+/* Estilos para o container de cartões de Habilidades */
+#s-habilidades .layout-grid #cartoes-habilidades {
+  display: flex; /* Container flexível */
+  justify-content: center; /* Centralização horizontal dos itens */
+  gap: 16px; /* Espaçamento entre os itens */
+  margin-left: auto; /* Centralização automática à esquerda */
+  margin-right: auto; /* Centralização automática à direita */
+  max-width: 1200px; /* Largura máxima do container */
+}
+
+/* Estilos para os cartões de Habilidades */
+#s-habilidades .layout-grid #cartoes-habilidades article {
+  background-color: #e4e2e2; /* Cor de fundo do cartão */
+  border: 1px solid #111111; /* Borda do cartão */
+  padding: 16px; /* Espaçamento interno */
+  display: flex; /* Container flexível */
+  justify-content: center; /* Centralização horizontal */
+  align-items: center; /* Centralização vertical */
+}
+
+/* Estilos responsivos para os cartões de Habilidades */
+@media screen and (max-width: 1200px) {
+  #s-habilidades .layout-grid #cartoes-habilidades article {
+    flex-basis: calc(33.3333% - 16px); /* 3 cartões por linha */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #s-habilidades .layout-grid #cartoes-habilidades article {
+    flex-basis: calc(50% - 16px); /* 2 cartões por linha */
+  }
+}
+
+/* Estilos de hover para os cartões de Habilidades */
+#s-habilidades .layout-grid #cartoes-habilidades article:hover {
+  border-color: var(--verde-claro); /* Cor da borda ao passar o mouse */
+}
+
+/* Estilos para as imagens dentro dos cartões de Habilidades */
+#s-habilidades .layout-grid #cartoes-habilidades img {
+  width: 60px; /* Largura da imagem */
+  height: 60px; /* Altura da imagem */
+}
+
+/* Estilos para elementos ocultos */
+.oculto {
+  display: none; /* Oculta o elemento */
+}
+
+/* Estilos para a seção de Experiência */
+#s-experience {
+  padding: 96px 48px; /* Espaçamento interno */
+  background-color: var(--preto); /* Cor de fundo */
+  text-align: center; /* Centralização do conteúdo */
+}
+
+/* Estilos responsivos para a seção de Experiência */
+@media screen and (max-width: 992px) {
+  #s-experience {
+    padding: 48px 24px; /* Espaçamento interno reduzido */
+  }
+}
+
+/* Estilos para o título da seção de Experiência */
+#s-experience .grid-layout h2 {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: var(--branco); /* Cor do texto */
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para o span dentro do título da seção de Experiência */
+#s-experience .grid-layout h2 span {
+  color: var(--verde-claro); /* Cor especial para o span */
+}
+
+/* Estilos para o container de Experiência */
+#s-experience .grid-layout #experience {
+  margin: 24px 0px; /* Margem superior e inferior */
+  display: flex; /* Container flexível */
+  justify-content: center; /* Centralização horizontal */
+  align-items: center; /* Centralização vertical */
+  flex-direction: column; /* Direção da disposição dos itens */
+}
+
+/* Estilos para as opções de formação */
+#s-experience .grid-layout #experience .opcao-formacao {
+  display: flex; /* Container flexível */
+  gap: 16px; /* Espaçamento entre os itens */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilos para as empresas de formação */
+#s-experience .grid-layout #experience .empresa {
+  padding: 8px 16px; /* Espaçamento interno */
+  background-color: #959595; /* Cor de fundo */
+  border-radius: 8px; /* Borda arredondada */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#s-experience .grid-layout #experience .empresa:hover {
+  background-color: var(--verde-claro); /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o texto de formação */
+#s-experience .grid-layout .texto-formacao {
+  max-width: 800px; /* Largura máxima */
+  text-align: left; /* Alinhamento à esquerda */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilos para o título da formação */
+#s-experience .grid-layout .tituloFormacao {
+  color: var(--branco); /* Cor do texto */
+  font-size: 2rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para a data da formação */
+#s-experience .grid-layout .dataFormacao {
+  color: #6c6c6c; /* Cor do texto */
+  margin-bottom: 16px; /* Espaçamento inferior */
+}
+
+/* Estilos para a empresa da formação */
+#s-experience .grid-layout .empresaFormacao {
+  color: var(--verde-claro); /* Cor do texto */
+  font-weight: 500; /* Peso da fonte */
+  margin-bottom: 8px; /* Espaçamento inferior */
+}
+
+/* Estilos para o link de mudar descrição */
+#s-experience .grid-layout .mudarDescricao {
+  color: var(--branco); /* Cor do texto */
+}
+
+/* Estilos para a seção de Projetos */
+#s-projetos {
+  padding: 96px 48px; /* Espaçamento interno */
+  text-align: center; /* Centralização do conteúdo */
+  background-color: #111; /* Cor de fundo */
+}
+
+/* Estilos responsivos para a seção de Projetos */
+@media screen and (max-width: 992px) {
+  #s-projetos {
+    padding: 48px 24px; /* Espaçamento interno reduzido */
+  }
+}
+
+/* Estilos para o título da seção de Projetos */
+#s-projetos .grid-layout h2 {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: #fff; /* Cor do texto */
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para os links da seção de Projetos */
+#s-projetos .grid-layout a {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: var(--verde-claro); /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  text-decoration: underline; /* Sublinhado */
+}
+
+/* Estilos para o span da seção de Projetos */
+#s-projetos .grid-layout span {
+  color: var(--verde-claro); /* Cor do texto */
+}
+
+/* Estilos para o container de Projetos */
+#s-projetos .grid-layout #projetos {
+  margin: 24px 0px; /* Margem superior e inferior */
+  display: flex; /* Container flexível */
+  justify-content: space-between; /* Espaçamento uniforme entre os itens */
+  align-items: stretch; /* Alinhamento vertical */
+  flex-wrap: wrap; /* Quebra de linha automática */
+  text-align: left; /* Alinhamento à esquerda */
+}
+
+/* Estilos para os projetos */
+#s-projetos .grid-layout #projetos > article {
+  height: auto; /* Altura automática */
+  padding: 32px; /* Espaçamento interno */
+  margin: 8px; /* Margem */
+  flex-basis: calc(33% - 20px); /* Base flexível */
+  flex-grow: 1; /* Crescimento flexível */
+  border: 1px solid #111; /* Borda */
+  transition: 1s all ease; /* Transição suave */
+  background-color: #151515; /* Cor de fundo */
+}
+
+#s-projetos .grid-layout #projetos > article:hover {
+  border: 1px solid #00bf63; /* Borda ao passar o mouse */
+}
+
+/* Estilos responsivos para os projetos */
+@media screen and (max-width: 1200px) {
+  #s-projetos .grid-layout #projetos > article {
+    flex-basis: calc(50% - 20px); /* 2 projetos por linha */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #s-projetos .grid-layout #projetos > article {
+    flex-basis: calc(100% - 20px); /* 1 projeto por linha */
+  }
+}
+
+/* Estilos para os títulos dos projetos */
+#s-projetos .grid-layout #projetos > article h3 {
+  color: #fff; /* Cor do texto */
+  font-size: 2.4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para os textos dos projetos */
+#s-projetos .grid-layout #projetos > article p {
+  line-height: 24px; /* Altura da linha */
+  margin: 24px 0px; /* Margem */
+  color: #9ca3af; /* Cor do texto */
+  line-height: 3.2rem; /* Altura da linha */
+  font-size: 1.8rem; /* Tamanho da fonte */
+}
+
+/* Estilos para a seção de Contato */
+.contato {
+  display: flex; /* Container flexível */
+  flex-direction: column; /* Direção dos itens */
+  align-items: center; /* Alinhamento vertical */
+  padding: 60px 0; /* Espaçamento interno */
+  background-color: var(--branco); /* Cor de fundo */
+}
+
+/* Estilos para o título da seção de Contato */
+.contato h2 {
+  font-size: 2.5em; /* Tamanho da fonte */
+  font-weight: 600; /* Peso da fonte */
+  color: var(--preto); /* Cor do texto */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilos para o texto da seção de Contato */
+.contato p {
+  font-size: 1.2em; /* Tamanho da fonte */
+  color: var(--cinza); /* Cor do texto */
+  margin-bottom: 40px; /* Espaçamento inferior */
+}
+
+/* Estilos para o formulário */
+.form {
+  width: 100%; /* Largura */
+  max-width: 600px; /* Largura máxima */
+  margin: 40px auto; /* Margem */
+  background-color: var(--branco); /* Cor de fundo */
+  padding: 30px; /* Espaçamento interno */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para as etiquetas do formulário */
+form label {
+  font-size: 1.2em; /* Tamanho da fonte */
+  color: var(--cinza); /* Cor do texto */
+  margin-bottom: 8px; /* Espaçamento inferior */
+}
+
+/* Estilos para os campos do formulário */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%; /* Largura */
+  padding: 12px; /* Espaçamento interno */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  border: 1px solid var(--cinza); /* Borda */
+  border-radius: 4px; /* Borda arredondada */
+  font-size: 1em; /* Tamanho da fonte */
+}
+
+/* Estilos para o botão de envio do formulário */
+form input[type="submit"] {
+  padding: 12px 20px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Borda arredondada */
+  background-color: var(--preto); /* Cor de fundo */
+  color: var(--branco); /* Cor do texto */
+  font-size: 1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor do mouse */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--verde-claro); /* Cor de fundo ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato {
+    padding: 40px 20px; /* Espaçamento interno reduzido */
+  }
+
+  .form {
+    padding: 20px; /* Espaçamento interno reduzido */
+  }
+}
+
+/* Estilos para o rodapé */
+.footer {
+  background-color: var(--cinza); /* Cor de fundo */
+  color: var(--branco); /* Cor do texto */
+  padding: 0px 0; /* Espaçamento interno */
+  font-size: 1em; /* Tamanho da fonte */
+}
+
+/* Estilos para o conteúdo do rodapé */
+.footer-content {
+  display: flex; /* Container flexível */
+  justify-content: space-between; /* Espaçamento uniforme entre os itens */
+  align-items: center; /* Alinhamento vertical */
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Margem */
+  padding: 0 20px; /* Espaçamento interno */
+}
+
+/* Estilos para o lado esquerdo do rodapé */
+.footer-left {
+  flex-grow: 1; /* Crescimento flexível */
+}
+
+/* Estilos para o lado direito do rodapé */
+.footer-right {
+  flex-shrink: 0; /* Encolhimento flexível */
+}
+
+/* Estilos para o logo do rodapé */
+.footer-logo {
+  max-width: 80px; /* Largura máxima */
+  height: auto; /* Altura automática */
+  background-color: transparent; /* Cor de fundo transparente */
+}
