@@ -1077,6 +1077,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
   width: 100%; /* Largura */
   padding: 12px; /* Espaçamento interno */
   margin-bottom: 20px; /* Espaçamento inferior */
@@ -1087,6 +1088,7 @@ form textarea {
 
 /* Estilos para o botão de envio do formulário */
 form input[type="submit"] {
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
   padding: 12px 20px; /* Espaçamento interno */
   border: none; /* Sem borda */
   border-radius: 4px; /* Borda arredondada */
@@ -1108,7 +1110,7 @@ form input[type="submit"]:hover {
   }
 
   .form {
-    padding: 20px; /* Espaçamento interno reduzido */
+    padding: 10px; /* Espaçamento interno reduzido */
     margin: 20px 0; /* Margem reduzida */
   }
 
