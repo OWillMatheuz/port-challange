@@ -42,13 +42,18 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 /* Estilos para a seção de menu */
 header.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
-  padding: 16px 64px;
+  padding: 20px 80px;
+  position: relative;
+  z-index: 1;
+  margin-top: -80px;
 }
 
 /* Estilos para a logo */
@@ -103,13 +108,18 @@ header.menu {
 .menu__dropdown {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: blue;
-  border-radius: 4px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  top: 0; /* Alinha o topo do dropdown com o final do botão do menu */
+  left: 0; /* Posiciona o dropdown à esquerda */
+  width: 200px; /* Largura do dropdown */
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transform-origin: left top; /* Define a origem da transformação */
+  transform: translateX(-100%); /* Inicia o dropdown à esquerda */
+  transition: transform 0.3s ease-in-out; /* Transição suave para a animação */
+}
+
+.menu__dropdown.active {
+  transform: translateX(0); /* Move o dropdown para a posição inicial */
 }
 
 .menu__dropdown ul {
@@ -183,7 +193,9 @@ header.menu {
   }
 
   .menu__list__item button.menu-toggle:hover {
-    background-color: var(--verde-escuro); /* Verde mais escuro ao passar o mouse */
+    background-color: var(
+      --verde-escuro
+    ); /* Verde mais escuro ao passar o mouse */
   }
 
   .menu__dropdown {
@@ -207,13 +219,15 @@ header.menu {
   }
 
   .menu__list__item button.hamburger {
-    display: block; /* Mostrar o hamburger em telas maiores */
-    margin-right: 16px; /* Adicionar margem à direita para separar da logo */
+    .menu__list {
+      display: block !important; /* Mostra a lista em telas maiores */
+    }
+
+    .menu__list.active {
+      display: none !important; /* Garante que a lista esteja oculta quando ativa */
+    }
   }
 }
-
-
-
 
 /**/
 /* Estilos para a seção de título */
