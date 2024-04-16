@@ -294,7 +294,6 @@ section.title {
   }
 }
 
-
 /* Estilos para a seção 'Sobre' */
 #sobre {
   padding: 72px 0px;
@@ -533,7 +532,6 @@ section.title {
   }
 }
 
-
 /* Estilos para a seção de Habilidades */
 #s-habilidades {
   padding: 96px 48px; /* Espaçamento interno */
@@ -660,13 +658,6 @@ section.title {
   height: 40px;
 }
 
-
-
-
-
-
-
-
 /* Estilos para elementos ocultos */
 .oculto {
   display: none; /* Oculta o elemento */
@@ -759,6 +750,105 @@ section.title {
   color: var(--branco); /* Cor do texto */
 }
 
+/* Estilos responsivos para a seção de Experiência */
+@media screen and (max-width: 992px) {
+  #s-experience {
+    padding: 48px 24px; /* Espaçamento interno reduzido */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #s-experience .grid-layout #experience .opcao-formacao {
+    flex-direction: column; /* Altera a direção para coluna */
+    align-items: flex-start; /* Alinhamento à esquerda */
+  }
+
+  #s-experience .grid-layout #experience .empresa {
+    margin-bottom: 12px; /* Espaçamento inferior */
+  }
+}
+
+/* Estilos para a seção de Experiência */
+#s-experience {
+  padding: 96px 48px; /* Espaçamento interno */
+  background-color: var(--preto); /* Cor de fundo */
+  text-align: center; /* Centralização do conteúdo */
+}
+
+/* Estilos para o título da seção de Experiência */
+#s-experience .grid-layout h2 {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: var(--branco); /* Cor do texto */
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para o span dentro do título da seção de Experiência */
+#s-experience .grid-layout h2 span {
+  color: var(--verde-claro); /* Cor especial para o span */
+}
+
+/* Estilos para o container de Experiência */
+#s-experience .grid-layout #experience {
+  margin: 24px 0px; /* Margem superior e inferior */
+  display: flex; /* Container flexível */
+  justify-content: center; /* Centralização horizontal */
+  align-items: center; /* Centralização vertical */
+  flex-direction: column; /* Direção da disposição dos itens */
+}
+
+/* Estilos para as opções de formação */
+#s-experience .grid-layout #experience .opcao-formacao {
+  display: flex; /* Container flexível */
+  gap: 16px; /* Espaçamento entre os itens */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilos para as empresas de formação */
+#s-experience .grid-layout #experience .empresa {
+  padding: 8px 16px; /* Espaçamento interno */
+  background-color: #959595; /* Cor de fundo */
+  border-radius: 8px; /* Borda arredondada */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#s-experience .grid-layout #experience .empresa:hover {
+  background-color: var(--verde-claro); /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o texto de formação */
+#s-experience .grid-layout .texto-formacao {
+  max-width: 800px; /* Largura máxima */
+  text-align: left; /* Alinhamento à esquerda */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilos para o título da formação */
+#s-experience .grid-layout .tituloFormacao {
+  color: var(--branco); /* Cor do texto */
+  font-size: 2rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para a data da formação */
+#s-experience .grid-layout .dataFormacao {
+  color: #6c6c6c; /* Cor do texto */
+  margin-bottom: 16px; /* Espaçamento inferior */
+}
+
+/* Estilos para a empresa da formação */
+#s-experience .grid-layout .empresaFormacao {
+  color: var(--verde-claro); /* Cor do texto */
+  font-weight: 500; /* Peso da fonte */
+  margin-bottom: 8px; /* Espaçamento inferior */
+}
+
+/* Estilos para o link de mudar descrição */
+#s-experience .grid-layout .mudarDescricao {
+  color: var(--branco); /* Cor do texto */
+}
+
+/**/
 /* Estilos para a seção de Projetos */
 #s-projetos {
   padding: 96px 48px; /* Espaçamento interno */
@@ -829,6 +919,97 @@ section.title {
 }
 
 @media screen and (max-width: 768px) {
+  #s-projetos .grid-layout #projetos > article {
+    flex-basis: calc(100% - 20px); /* 1 projeto por linha */
+  }
+}
+
+/* Estilos para os títulos dos projetos */
+#s-projetos .grid-layout #projetos > article h3 {
+  color: #fff; /* Cor do texto */
+  font-size: 2.4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para os textos dos projetos */
+#s-projetos .grid-layout #projetos > article p {
+  line-height: 24px; /* Altura da linha */
+  margin: 24px 0px; /* Margem */
+  color: #9ca3af; /* Cor do texto */
+  line-height: 3.2rem; /* Altura da linha */
+  font-size: 1.8rem; /* Tamanho da fonte */
+}
+
+/* Estilos para a seção de Projetos */
+#s-projetos {
+  padding: 96px 48px; /* Espaçamento interno */
+  text-align: center; /* Centralização do conteúdo */
+  background-color: #111; /* Cor de fundo */
+}
+
+/* Estilos responsivos para a seção de Projetos */
+@media screen and (max-width: 992px) {
+  #s-projetos {
+    padding: 48px 24px; /* Espaçamento interno reduzido */
+  }
+}
+
+/* Estilos para o título da seção de Projetos */
+#s-projetos .grid-layout h2 {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: #fff; /* Cor do texto */
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para os links da seção de Projetos */
+#s-projetos .grid-layout a {
+  padding-bottom: 24px; /* Espaçamento inferior */
+  color: var(--verde-claro); /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  text-decoration: underline; /* Sublinhado */
+}
+
+/* Estilos para o span da seção de Projetos */
+#s-projetos .grid-layout span {
+  color: var(--verde-claro); /* Cor do texto */
+}
+
+/* Estilos para o container de Projetos */
+#s-projetos .grid-layout #projetos {
+  margin: 24px 0px; /* Margem superior e inferior */
+  display: flex; /* Container flexível */
+  justify-content: space-between; /* Espaçamento uniforme entre os itens */
+  align-items: stretch; /* Alinhamento vertical */
+  flex-wrap: wrap; /* Quebra de linha automática */
+  text-align: left; /* Alinhamento à esquerda */
+}
+
+/* Estilos para os projetos */
+#s-projetos .grid-layout #projetos > article {
+  height: auto; /* Altura automática */
+  padding: 32px; /* Espaçamento interno */
+  margin: 8px; /* Margem */
+  flex-basis: calc(33% - 20px); /* Base flexível */
+  flex-grow: 1; /* Crescimento flexível */
+  border: 1px solid #111; /* Borda */
+  transition: 1s all ease; /* Transição suave */
+  background-color: #151515; /* Cor de fundo */
+}
+
+#s-projetos .grid-layout #projetos > article:hover {
+  border: 1px solid #00bf63; /* Borda ao passar o mouse */
+}
+
+/* Estilos responsivos para os projetos */
+@media screen and (max-width: 992px) {
+  #s-projetos .grid-layout #projetos > article {
+    flex-basis: calc(50% - 20px); /* 2 projetos por linha */
+  }
+}
+
+@media screen and (max-width: 576px) {
   #s-projetos .grid-layout #projetos > article {
     flex-basis: calc(100% - 20px); /* 1 projeto por linha */
   }
@@ -928,6 +1109,15 @@ form input[type="submit"]:hover {
 
   .form {
     padding: 20px; /* Espaçamento interno reduzido */
+    margin: 20px 0; /* Margem reduzida */
+  }
+
+  form label,
+  form input[type="text"],
+  form input[type="email"],
+  form textarea,
+  form input[type="submit"] {
+    font-size: 0.9em; /* Reduzindo o tamanho da fonte para telas menores */
   }
 }
 
@@ -935,15 +1125,17 @@ form input[type="submit"]:hover {
 .footer {
   background-color: var(--cinza); /* Cor de fundo */
   color: var(--branco); /* Cor do texto */
-  padding: 0px 0; /* Espaçamento interno */
+  padding: 20px 0; /* Espaçamento interno */
   font-size: 1em; /* Tamanho da fonte */
+  text-align: center; /* Centralizar texto */
 }
 
 /* Estilos para o conteúdo do rodapé */
 .footer-content {
   display: flex; /* Container flexível */
-  justify-content: space-between; /* Espaçamento uniforme entre os itens */
-  align-items: center; /* Alinhamento vertical */
+  flex-direction: column; /* Direção dos itens */
+  justify-content: center; /* Alinhamento vertical */
+  align-items: center; /* Alinhamento horizontal */
   max-width: 1200px; /* Largura máxima */
   margin: 0 auto; /* Margem */
   padding: 0 20px; /* Espaçamento interno */
@@ -951,12 +1143,7 @@ form input[type="submit"]:hover {
 
 /* Estilos para o lado esquerdo do rodapé */
 .footer-left {
-  flex-grow: 1; /* Crescimento flexível */
-}
-
-/* Estilos para o lado direito do rodapé */
-.footer-right {
-  flex-shrink: 0; /* Encolhimento flexível */
+  margin-bottom: 10px; /* Espaçamento inferior */
 }
 
 /* Estilos para o logo do rodapé */
@@ -964,4 +1151,17 @@ form input[type="submit"]:hover {
   max-width: 80px; /* Largura máxima */
   height: auto; /* Altura automática */
   background-color: transparent; /* Cor de fundo transparente */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Direção dos itens alterada para coluna */
+  }
+
+  .footer-left,
+  .footer-right {
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
 }
