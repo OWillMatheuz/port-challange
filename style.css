@@ -228,6 +228,73 @@ section.title {
   margin-left: 1px; /* Adiciona um pequeno espaço entre o texto e a imagem */
 }
 
+/* Estilos para a seção de título em dispositivos menores */
+@media screen and (max-width: 768px) {
+  section.title {
+    margin: 24px 0; /* Removido o margin lateral */
+    padding: 0 16px; /* Adicionado padding lateral */
+  }
+
+  .title__div {
+    flex-direction: column; /* Alinhamento vertical dos itens */
+    align-items: center; /* Centraliza os itens na vertical */
+  }
+
+  .title__profile {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    margin-bottom: 24px;
+  }
+
+  .title__container {
+    margin-right: 0; /* Removido o margin à direita */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .title__bio {
+    margin-bottom: 16px; /* Ajuste de margem inferior */
+    font-size: 2rem; /* Tamanho de fonte reduzido */
+  }
+
+  .title__subsection {
+    font-size: 1.2rem; /* Tamanho de fonte reduzido */
+    margin-bottom: 16px;
+  }
+}
+
+/* Estilos para a seção de título em dispositivos maiores */
+@media screen and (min-width: 769px) {
+  /* Mantém os estilos anteriores para dispositivos maiores */
+
+  section.title {
+    margin: 24px 130px; /* Mantém a margem lateral */
+  }
+
+  .title__div {
+    flex-direction: row-reverse; /* Mantém o alinhamento em linha e reverso */
+    justify-content: space-around; /* Mantém o espaçamento uniforme dos itens */
+    align-items: center; /* Mantém a centralização vertical dos itens */
+  }
+
+  .title__profile {
+    width: 320px;
+    height: 320px;
+  }
+
+  .title__container {
+    margin-right: 50px; /* Mantém o margin à direita */
+  }
+
+  .title__bio {
+    font-size: 3.25rem; /* Mantém o tamanho de fonte */
+  }
+
+  .title__subsection {
+    font-size: 1.3rem; /* Mantém o tamanho de fonte */
+  }
+}
+
+
 /* Estilos para a seção 'Sobre' */
 #sobre {
   padding: 72px 0px;
@@ -401,7 +468,9 @@ section.title {
 /* Estilos para a seção 'Sobre' em dispositivos menores */
 @media screen and (max-width: 768px) {
   #sobre {
-    padding: 48px 16px; /* Adiciona padding para dispositivos menores */
+    padding: 48px 0; /* Removido o padding lateral */
+    width: 100%; /* Ocupa toda a largura da tela */
+    box-sizing: border-box; /* Mantém a largura total incluindo padding */
   }
 
   #sobre .layout-grader > div {
@@ -412,7 +481,6 @@ section.title {
   #sobre .layout-grader > div #foto-criador {
     width: 100%;
     height: auto; /* Remove a altura fixa */
-    max-width: 300px; /* Limita a largura da imagem */
     border-radius: 16px;
     margin-bottom: 24px;
   }
@@ -430,6 +498,38 @@ section.title {
   #sobre .layout-grader > div div:nth-child(2) h4,
   #sobre .layout-grader > div div:nth-child(2) p {
     font-size: 1.5rem;
+  }
+}
+
+/* Estilos para a seção 'Sobre' em dispositivos maiores */
+@media screen and (min-width: 769px) {
+  #sobre .layout-grader > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    max-width: 1200px; /* Limita a largura máxima */
+  }
+
+  #sobre .layout-grader > div #foto-criador {
+    width: 45%; /* Largura reduzida para ajustar o layout */
+    height: 300px;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  #sobre .layout-grader > div div:nth-child(2) {
+    width: 50%;
+  }
+
+  #sobre .layout-grader > div div:nth-child(2) h2 {
+    font-size: 3rem;
+  }
+
+  #sobre .layout-grader > div div:nth-child(2) h3,
+  #sobre .layout-grader > div div:nth-child(2) h4,
+  #sobre .layout-grader > div div:nth-child(2) p {
+    font-size: 1.8rem;
   }
 }
 
@@ -519,6 +619,32 @@ section.title {
   width: 60px; /* Largura da imagem */
   height: 60px; /* Altura da imagem */
 }
+
+/* Estilos responsivos para os ícones de Habilidades */
+@media screen and (max-width: 992px) {
+  #s-habilidades .layout-grid #cartoes-habilidades {
+    flex-direction: row; /* Altera para linha em tablets */
+    flex-wrap: wrap; /* Quebra de linha automática */
+    justify-content: center; /* Centraliza os itens */
+  }
+
+  #s-habilidades .layout-grid #cartoes-habilidades article {
+    flex-basis: calc(33.3333% - 16px); /* 3 cartões por linha com espaço entre eles */
+    margin-right: 16px; /* Espaçamento à direita */
+    margin-bottom: 16px; /* Espaçamento inferior */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #s-habilidades .layout-grid #cartoes-habilidades article {
+    flex-basis: calc(50% - 16px); /* 2 cartões por linha em celulares */
+    margin-right: 16px; /* Espaçamento à direita */
+    margin-bottom: 16px; /* Espaçamento inferior */
+  }
+}
+
+
+
 
 /* Estilos para elementos ocultos */
 .oculto {
