@@ -135,15 +135,18 @@ section.menu {
   }
 
   .logo {
+    width: 100%; /* Logo ocupando a largura total */
+    height: auto;
     margin-bottom: 10px;
+    max-width: 300px; /* Define uma largura máxima para o logo */
   }
 
   .menu__list {
-    display: none; /* Ocultar a lista em telas menores */
+    display: none;
     flex-direction: column;
     gap: 1px;
     position: absolute;
-    top: calc(100% + 16px); /* Posiciona a lista abaixo do botão hamburger */
+    top: calc(100% + 16px);
     left: 0;
     background-color: var(--cinza);
     border-radius: 4px;
@@ -154,22 +157,17 @@ section.menu {
   .menu__list__item {
     margin-bottom: 8px;
   }
-  
 
-  .menu__list__item button.hamburger {
+  .menu__list__item button.menu-toggle {
     display: block;
     background-color: transparent;
-    color: var(--preto);
+    color: var(--verde-claro);
     border: none;
     border-radius: 4px;
     padding: 6px;
     font-size: 1.5rem;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
-
-  .menu__list__item button.close {
-    display: none;
   }
 
   .menu__dropdown {
@@ -184,10 +182,7 @@ section.menu {
     top: 100%;
     left: 0;
   }
-  
 }
-
-
 
 /* Estilos para a seção de menu em dispositivos maiores */
 @media screen and (min-width: 770px) {
