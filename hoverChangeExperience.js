@@ -1,3 +1,4 @@
+// Função para que qundo clicar em cada assunto, mostra suas descrições
 document.addEventListener("DOMContentLoaded", function () {
   // Função para mostrar descrição ao clicar nas empresas
   function mostrarDescricaoFormacao(selector, descricao, titulo, data) {

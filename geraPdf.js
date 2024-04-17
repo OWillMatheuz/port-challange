@@ -1,3 +1,4 @@
+// Uma função de download de um arquivo PDF. Quando esse botão é clicado pelo usuário, o código inicia o download de um arquivo PDF pré-definido. No caso um Currículo
 document.addEventListener("DOMContentLoaded", function () {
   const btnGerarPdf = document.getElementById("gerar-pdf");
 
